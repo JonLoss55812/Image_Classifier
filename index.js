@@ -51,7 +51,7 @@ async function app() {
             const activation = net.infer(webcamElement, 'conv_preds');
             // Get the most likely class and confidences from the classifier module.
             const result = await classifier.predictClass(activation);
-            const classes = ['1-2-3 Shoot', 'Rock', 'Paper', 'Scissors', 'Metal'];
+            const classes = ['Rock', 'Paper', 'Scissors', 'Metal', '1-2-3 Shoot',];
             document.getElementById('console').innerText = `
         prediction: ${classes[result.classIndex]}\n
         probability: ${result.confidences[result.classIndex]}
